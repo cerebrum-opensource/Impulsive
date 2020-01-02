@@ -1,0 +1,1 @@
+<a href="{{ route('add_faq', encrypt_decrypt('encrypt',$id))}}"><button data-toggle="tooltip" title="{{ trans('label.edit') }}" class="pd-setting-ed"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></a><button title="{{ trans('label.delete') }}" class="pd-setting-ed" onclick="faq_delete({{ $id }})"><i class="fa fa-remove " aria-hidden="true"></i></button>

@@ -1,0 +1,20 @@
+.scroll-to-top--button
+    display: block
+    position: fixed
+    background: #fff
+    border-radius: 50%
+    width: $scroll-to-top-fontsize
+    height: $scroll-to-top-fontsize
+    bottom: $scroll-to-top-position-bottom
+    right: $scroll-to-top-position-right
+    z-index: 9999
+    opacity: 0
+    transition: opacity 0.5s linear
+    i
+        font-size: $scroll-to-top-fontsize
+        color: $winimi-green
+        &:hover
+            color: $scroll-to-top-hover-color
+.scroll-to-top--show
+    opacity: 1
+

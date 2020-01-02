@@ -1,0 +1,120 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div id="mySidenav" class="sidenavlogin sidenav sidenav2">
+    <p> < MENU SCHLIESSEN</p>
+    <h3>Jetzt einloggen</h3>
+    <div class="table-otr table3">
+        <form method="POST" action="{{ route('login') }}" id="login_form">
+            @csrf
+            <table class="table">
+                <tr><td  class="text-center bg-color">Login</td></tr>
+                <tr>
+                    <td class="konstand-otr">
+                        <input type="hidden" name="user_type" value="1">
+                        <div class="form-group">
+                            <label for="usr" class="label-text">Benutzername</label>
+                            <input type="text" class="form-control form-control2" id="usr" name="email">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <div class="form-group">
+                      <label for="pass" class="label-text">Password</label>
+                      <input type="password" class="form-control form-control2" id="pass" name="password">
+                    </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Anmelden" class="btn-form btn-form2 mt-3"></td>
+                </tr>       
+            </table>
+        </form>
+    </div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeLoginNav()">&times;</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" class="open-nav" onclick="openLoginNav()">&#9776;</span>
+<div class="live-deals live-deals2"><!--live-deals start--> 
+<div class="container">
+<h3 class="sec-heading"><span>Jetzt anmelden</span></h3>
+<div class="free-otr">
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+
+                <div class="card-body">
+                    @if (session('resent'))
+                        <div class="alert alert-success" role="alert">
+                            {{ __('A fresh verification link has been sent to your email address.') }}
+                        </div>
+                    @endif
+
+                    {{ __('Before proceeding, please check your email for a verification link.') }}
+                    {{ __('If you did not receive the email') }}, <a href="{{ route('verification.resend') }}">{{ __('click here to request another') }}</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-md-5">
+    <div class="headline">
+    <h4>HEADLINE WINIMI</h4>
+        <ul>
+            <li>
+            <span class="headline-lt">
+            <img src="images/tick.png" alt="tick" title="tick">
+            </span>
+            <span class="headline-rt">Blindtext.Blindtext.Blindtext.Blindtext.Blindtext
+                Blindtext.Blindtext.Blindtext.Blindtext.Blindtext
+            </span></li>
+            <li>
+            <span class="headline-lt">
+            <img src="images/tick.png" alt="tick" title="tick">
+            </span>
+            <span class="headline-rt">Blindtext.Blindtext.Blindtext.Blindtext.Blindtext
+                Blindtext.Blindtext.Blindtext.Blindtext.Blindtext
+                    </span></li>
+                    
+                    <li>
+            <span class="headline-lt">
+            <img src="images/tick.png" alt="tick" title="tick">
+            </span>
+            <span class="headline-rt">Blindtext.Blindtext.Blindtext.Blindtext.Blindtext
+                Blindtext.Blindtext.Blindtext.Blindtext.Blindtext
+                    </span></li>
+                    
+        </ul>
+    </div>
+
+</div>
+</div>
+</div>
+</div><!--live-deals end--> 
+</div>
+<div class="KEINE-WINIMI">
+<div class="container">
+    <h3 class="sec-heading sec-heading3">KEINE WINIMI-DEALS VERPASEN <span>– JETZT EINTRAGEN</span></h3>
+    <div class="kinni-inner">
+        <div class="kinni-lt">
+        <p>keine deals verpassen.<span>jetzt eintragen.</span></p>
+        <h6>Gorgeous monthly collections of lingerie you'll love, at prices you'll adore!</h6>
+        </div>
+        <div class="kinni-rt">
+        <p>NEUSTEN DEALS</p>
+        <h6>Bei Anmeldung xx WINIS kostenlos <span>erhalten</span></h6>
+        <input type="text" value="Deine E-Mail Adresse" class="input-box">
+        <input type="button" value="Anmelden" class="btn-amendon">
+        </div>
+    </div>
+</div>
+</div>
+
+@endsection

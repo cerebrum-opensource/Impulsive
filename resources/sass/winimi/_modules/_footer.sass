@@ -1,0 +1,42 @@
+//footer bottom ???
+.footer-bottom
+    margin-top: 40px
+    margin-bottom: 40px
+
+    .footer--mb30
+        margin-bottom: 30px
+
+        @include media-min-xl
+            margin-bottom: 0
+
+    h3
+        text-transform: uppercase
+        font-size: 18px
+        margin-bottom: 20px
+
+    //social icons
+    .social-icons
+        img
+            width: 40px
+            height: auto
+            margin-right: 10px
+
+    //payment icons
+    .payment-icons
+        .footer--payment-icon
+            height: $payment-icons-height
+            //margin: $payment-icons-margin
+            float: left
+
+//store information
+.store-information
+    div:not(:first-child)
+        padding-bottom: 10px
+
+    span
+        padding-left: 10px
+
+.footer-ssl
+    img
+        height: 56px
+        width: auto

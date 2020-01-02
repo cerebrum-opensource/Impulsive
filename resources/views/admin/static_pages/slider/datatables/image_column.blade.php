@@ -1,0 +1,1 @@
+<img src="{{ asset('/images/admin/sliders/').'/'.$id.'/'.$image }}">

@@ -1,0 +1,757 @@
+
+
+.gutschein-outer-container {
+    height: 100%;
+}
+
+
+.pop-container{
+    z-index: 2147483647;
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background: rgba(0,0,0,0.25);
+    left: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
+    max-width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.pop-container iframe{
+    display: block;
+    margin: 0 auto;
+    margin-top: 100px;
+    max-width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+@media( max-width: 550px){
+    .pop-container iframe{
+        width: 100% !important;
+    }
+}
+
+.close-pop{
+    position: absolute;
+    z-index: 99999999999999999999;
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    right: 30px;
+    font-size: 54px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-pop:hover{
+    color: white;
+}
+
+.pop-style{
+    -webkit-overflow-scrolling: touch;
+
+}
+
+iframe{
+    min-height: 720px;
+}
+
+#redeem_voucher_form {
+    margin-top: 40px;
+    width: 50%;
+}
+
+.kommende .text-lower {
+    margin-top: 0;
+}
+
+.kommende .alert-success {
+    height: 100px;
+}
+
+#redeem_voucher_form input {
+    width: 100%;
+    max-width: 600px;
+}
+
+#redeem_voucher_form button {
+    margin-top: 10px;
+    width: auto;
+    max-width: 300px;
+}
+
+.FUNKTIONIERTS .container {
+    margin-bottom: 40px;
+}
+
+.live-deals{
+	//display: none !important;
+}
+
+.live-deals.agb, .impressum-container, .datenschutz-container, .gewinnspiel-sub-container, .profile-container, .live-deals2, .live-deals.kommende, .product-otr .live-deals, .package-container {
+    display: block !important;
+}
+
+.gewinnspiel-sub-container iframe {
+    margin: 0 auto;
+    display: block;
+}
+
+.sr-no {
+    width: 100px;
+    margin-left: 0;
+    height: auto;
+}
+
+.lorem-text {
+    width: calc(100% - 100px);
+}
+
+.newsletter-container {
+    background-color: #FDA501;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.newsletter-container::before,
+.newsletter-container::after {
+    content: " ";
+    display: table;
+}
+
+.newsletter-container::after {
+    clear: both;
+}
+
+
+.newsletter-container-left {
+    float: left;
+    width: 35%;
+}
+
+.newsletter-container-left iframe {
+    width: 100% !important;
+}
+
+.newsletter-container-right {
+    float: left;
+    width: 65%;
+}
+
+.newsletter-container-right img {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product-inner3a {
+
+    max-height: 250px;
+    overflow: hidden;
+
+}
+
+.more-text-button {
+    cursor: pointer;
+}
+
+.show-product-text {
+    max-height: 9999px;
+    overflow: hidden;
+}
+
+#mySidenav > a:nth-child(9), #navbarSupportedContent > ul > li:nth-child(3), #navbarSupportedContent > ul > li:nth-child(2),#navbarSupportedContent > ul > li:nth-child(4), #mySidenav > a:nth-child(6), #mySidenav > a:nth-child(7){
+	//display: none;
+}
+
+.free-bar h4 {
+    font-size: 24px;
+}
+
+.img1 img {
+    width: 100% !important;
+    height: auto !important;
+}
+
+.img1 {
+    float: left;
+    width: 33.33333%;
+    padding: 0 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    opacity: 0.65;
+}
+
+.carousel-control-next:hover, .carousel-control-prev:hover {
+    opacity: 0.9;
+}
+
+/*.form-control {*/
+/*    padding: .375rem .375rem;*/
+/*    width: auto;*/
+/*}*/
+
+.product-inner .image_responsive {
+    height: auto;
+}
+
+.scroll-to-top--button {
+    display: block;
+    position: fixed;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+.warenwert {
+    margin-top: 5px !important;
+    color: #969696 !important;
+}
+
+.gesamtpreis {
+    color: #93d50a !important;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 18px !important;
+    text-transform: uppercase;
+}
+
+.scroll-to-top--button i {
+    font-size: 40px;
+    color: #93D50A;
+}
+
+.scroll-to-top--button i:hover {
+    color: #FECE0A;
+}
+
+.scroll-to-top--show {
+    opacity: 1;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-bottom .footer--mb30 {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 750px) {
+    .footer-bottom .footer--mb30 {
+        margin-bottom: 0;
+    }
+}
+
+.footer-bottom h3 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom .social-icons img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.footer-bottom .payment-icons .footer--payment-icon {
+    height: 40px;
+    margin: 0;
+    float: left;
+}
+
+@media (max-width: 1400px) {
+    .navbar-otr li.nav-item a {
+        font-size: 13px;
+    }
+
+    .navbar-brand img {
+        width: 200px;
+    }
+
+    .login {
+        font-size: 13px;
+        padding-right: 50px;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 4.5px;
+        padding-right: 4.5px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .img1 {
+        float: left;
+        width: 50%;
+        padding: 0 5px;
+    }
+
+    .live-deals .flower-text img {
+        width: 100px;
+    }
+
+    .flower-text {
+        top: -11px;
+    }
+
+    .planned-deals-ul .flower-text {
+        left: -17.5px;
+    }
+
+    .live-deals .inner-text-flower {
+        right: 18px;
+        line-height: 12px;
+        top: 31px;
+        font-size: 12px;
+    }
+
+    .planned-deals-ul .count-inner {
+        text-align: right;
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .carousel-control-prev {
+        left: 30%;
+    }
+
+    .carousel-control-next {
+        right: 30%;
+    }
+
+    .img-count {
+        height: 250px;
+    }
+
+    .row.product1 > .col-md-8 {
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .row.product1 > .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bid-agent-counter {
+        margin-right: 22px;
+    }
+
+    .gebotsbutton .outer-box {
+        padding-left: 30px;
+    }
+
+    .gebotsbutton .button-outer {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .login {
+        font-size: 13px;
+        padding-right: 25px;
+    }
+
+    .open-nav.open-nav-prelogin {
+        top: 74px;
+    }
+
+    .open-nav {
+        top: 74px;
+    }
+
+    .navbar-brand img {
+        margin-top: 15px;
+    }
+
+    .navbar-otr {
+        height: 80px !important;
+    }
+
+    .newsletter-container {
+        display: block;
+    }
+
+    .newsletter-container-right {
+        width: 100%;
+    }
+
+    .newsletter-container-left {
+        width: 100%;
+    }
+
+    .flower-text {
+        right: 155px;
+    }
+
+    .banner-caption {
+        bottom: 5%;
+    }
+
+    .count-inner span {
+        top: -10px;
+    }
+
+    #auction_start_date {
+        font-size: 13px;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+    }
+
+    .navbar-brand {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .text1a.text5a {
+        font-size: 21px;
+    }
+
+    .outer-box {
+        width: 80%;
+    }
+
+    .open-nav {
+        top: 74px;
+    }
+
+    .img-count {
+        height: 200px;
+    }
+
+    .das h2 {
+        font-size: 24px;
+    }
+
+    #mySidenav {
+        max-width: 250px;
+    }
+
+    .sidenav a {
+        font-size: 14px !important;
+    }
+
+    #mySidenav .btn-form {
+        height: 35px !important;
+        padding: 0 5px !important;
+        border-radius: 0px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .open-nav.open-nav-prelogin {
+        top: 69px;
+    }
+
+    .open-nav {
+        top: 71px;
+    }
+
+    .top-bar h4 span {
+        font-size: 14px;
+    }
+
+    .top-bar h4 {
+        padding-left: 0;
+        padding-top: 2.5px;
+        float: left;
+        font-size: 10px;
+    }
+
+    .img-count {
+        height: 150px;
+    }
+}
+
+@media (max-width: 700px) {
+
+
+    .slider_text_left {
+        margin-left: 0 !important;
+        text-align: center !important;
+        margin-right: 0 !important;
+        display: inline-block !important;
+    }
+
+    .open-nav {
+        top: 94px;
+    }
+
+    .carousel-control-prev {
+        left: 15%;
+        bottom: 5px;
+    }
+
+    .carousel-control-next {
+        right: 15%;
+        bottom: 5px;
+    }
+
+    .top-bar h4 span {
+        font-size: 14px;
+    }
+
+    .top-bar h4 {
+        padding-left: 0;
+        padding-top: 2.5px;
+        float: none;
+        justify-content: center;
+    }
+
+    .top-bar2 ul {
+        float: none;
+        justify-content: center;
+        margin-top: 2.5px;
+    }
+
+    .img-count {
+        height: 150px;
+    }
+
+    .top-bar2 ul li:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media(max-width: 550px){
+	.img1{
+		width: 100%;
+	}
+	.flower-text{
+		width: fit-content;
+	}
+	.text1a.text3b{
+		font-size: 16px;
+	}
+	.das h2{
+		font-size: 21px;
+	}
+	.live-deals .container{
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+    .live-deals-ul.list-view-outer .img-count {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .faq_question {
+        font-size: 16px;
+    }
+
+    #redeem_voucher_form {
+        width: 100%;
+    }
+
+    #redeem_voucher_form button {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .live-deals .inner-text-flower {
+        right: 5px;
+        top: 27px;
+    }
+
+    .live-deals-ul .count-inner {
+        width: 90px;
+        font-size: 18px;
+        height: 31px;
+    }
+
+    .planned-deals-ul .count-inner span, .live-deals-ul .count-inner span {
+        top: 2px;
+    }
+
+    .live-deals-ul .count-inner span {
+        right: -1px;
+    }
+
+    .planned-deals .inner-text-flower {
+        right: 5px;
+        top: 27px;
+    }
+
+    .planned-deals-ul .flower-text {
+        left: -12.5px;
+    }
+
+    .count-inner {
+        max-width: 999px;
+    }
+
+    .inner-text-flower {
+        top: 27px;
+        left: 4px;
+        font-size: 12px;
+    }
+
+    .flower-text img {
+        max-width: 80px;
+    }
+
+    .flower-text3 .inner-text-flower {
+        font-size: 14px;
+        top: 35px;
+        right: 5px;
+    }
+
+    .planned-deals-ul .flower-text {
+        /*display: none;*/
+    }
+}
+
+@media (max-width: 550px) {
+    .img1 {
+        width: 100%;
+    }
+
+    .flower-text {
+        width: fit-content;
+    }
+
+    .text1a.text3b {
+        font-size: 16px;
+    }
+
+    .das h2 {
+        font-size: 21px;
+    }
+
+    .live-deals .container {
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .open-nav {
+        top: 107px;
+    }
+
+    .top-bar .top-bar2 li .yellow {
+        width: 100%;
+        display: block;
+    }
+
+    .top-bar .top-bar2 .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .top-bar .top-bar2 .white-sec {
+        font-size: 11px;
+    }
+
+    .selct-top-bar {
+        width: 35px;
+    }
+
+    .top-bar2 ul li:last-child {
+        padding-left: 2.5px;
+        padding-right: 2.5px;
+        display: block;
+        padding-top: 4px;
+        padding-left: 2.5px;
+    }
+
+    .top-bar2 .dropdownmenu {
+        font-size: 11px;
+    }
+
+    .selct-top-bar {
+        background-image: none;
+        padding-left: 0;
+    }
+
+    .footer-bottom .payment-icons .footer--payment-icon {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .banner-caption h4, .banner-caption h3 {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    .text1a.text5a {
+        font-size: 16px;
+    }
+
+    .outer-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    img.menu-bar {
+        width: 30px;
+    }
+
+    .banner-caption h3 {
+        margin-top: 2.5px;
+    }
+
+    .img-count {
+        height: 125px;
+    }
+
+    .carousel-control-prev {
+        left: 5%;
+        bottom: 2.5px;
+    }
+
+    .carousel-control-next {
+        right: 5%;
+        bottom: 2.5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .navbar-brand img {
+        width: 180px;
+    }
+
+    .banner-caption h4, .banner-caption h3 {
+        padding: 2.5px 5px;
+        font-size: 12px;
+    }
+}
