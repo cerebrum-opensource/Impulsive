@@ -1,0 +1,1 @@
+On detail page / on auction bid if auction is active that time and counter is not 0

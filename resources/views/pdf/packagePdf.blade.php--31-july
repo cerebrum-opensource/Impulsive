@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         /* Styles go here */
+         .page-header, .page-header-space {
+         height: 200px;
+         }
+         .page-footer, .page-footer-space {
+         height: 300px;
+         text-align: center;
+         }
+         .page-footer {
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+         border-top: 1px solid black; /* for demo */
+         background: #fff; /* for demo */
+         margin: 0 auto;
+         }
+         .page-header {
+         position: fixed;
+         top: 0mm;
+         width: 100%;
+         border-bottom: 1px solid black; /* for demo */
+         background: yellow; /* for demo */
+         }
+         .page {
+         page-break-after: never;
+         }
+         @page {
+         /*margin: 20mm*/
+         }
+         @media print {
+         thead {display: table-header-group;}
+         tfoot {display: table-footer-group;}
+         button {display: none;}
+         body {margin: 0;}
+         }
+      </style>
+   </head>
+   <body>
+       @include('pdf.footer')
+      <table style="margin: auto;">
+         @include('pdf.header')
+         <tbody>
+            <tr>
+               <td>
+                  <!--*** CONTENT GOES HERE ***-->
+                  <div class="page">
+                     <table width="100%" align="center" cellspacing="0" cellpadding="0" style="font-family:arial; font-size: 14px; background: #fff;">
+                        <tr>
+                           <td style="padding: 10 5px 5px 5px;">
+                              <table width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #ccc">
+                                 <tr>
+                                    <td width="100%" valign="top">
+                                       <table width="100%" cellspacing="0" cellpadding="0">
+                                          <tr>
+                                             <td colspan="3">
+                                                <table width="100%" cellspacing="0" cellpadding="0">
+                                                   <thead>
+                                                      <tr>
+                                                         <th width="10%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000;text-align: left; background: #ccc;">{{ trans('label.type') }}</th>
+                                                         <th width="10%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000;text-align: left;background: #ccc;">{{ trans('label.name') }}</th>
+                                                         <th width="10%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000; text-align: left;background: #ccc;">{{ trans('label.invoice_number') }}</th>
+                                                         <th width="15%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000; text-align: left;background: #ccc;">{{ trans('label.customer_number') }}</th>
+                                                         <th width="15%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000;text-align: left;background: #ccc;">{{ trans('label.amount') }}</th>
+                                                         <th width="20%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000;text-align: left;background: #ccc;">{{ trans('label.tax_percent') }}</th>
+                                                         <th width="20%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 6px 5px; color: #000;text-align: left;background: #ccc;">{{ trans('label.total_amount') }}</th>
+                                                         
+                                                      </tr>
+                                                   </thead>
+                                                   <tbody>
+                                                      <tr>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000;">{{ $type }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000;">{{ $package_name }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000;">{{ $invoice_number }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000;">{{ $customer_no }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000; text-align: right;">{{ $package_price }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000; text-align: right;">{{ $tax_price }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 5px 5px; color: #000; text-align: right;">{{ $total_price }}</td>
+                                                        
+                                                      </tr>
+                                                   </tbody>
+                                                   <tfoot>
+                                                      <tr>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 8px 5px; color: #000; border-top:1px solid #ccc;">{{ trans('label.total') }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 8px 5px; color: #000; border-top:1px solid #ccc;"></td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 8px 5px; color: #000; border-top:1px solid #ccc;"></td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 8px 5px; color: #000; border-top:1px solid #ccc;"></td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 8px 5px; color: #000; border-top:1px solid #ccc; text-align: right;">{{ $package_price }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 8px 5px; color: #000; border-top:1px solid #ccc; text-align: right;">{{ $tax_price }}</td>
+                                                         <td style="font-family:arial; font-size: 12px; font-weight: 400; margin:0; padding: 0; color: #000; border-top:1px solid #ccc; text-align: right;">{{ $total_price }}</td>
+                                                        
+                                                      </tr>
+                                                   </tfoot>
+                                                </table>
+                                             </td>
+                                          </tr>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                    <!--    <tr>
+                            <td>Garantie</td>
+                            <td>Die Garantie und Rücksendebestimmungen erhalten sie vom Lieferant.</td>
+                        </tr>
+                        <tr>
+                            <td>Garantie</td>
+                            <td>Die Garantie und Rücksendebestimmungen erhalten sie vom Lieferant.</td>
+                        </tr> -->
+                        <tr>
+                           <td colspan="3" style="padding: 20px 0">
+                              <table width="100%" cellspacing="0" cellpadding="0">
+                                 <tr>
+                                    <td width="40%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 8px 5px; color: #000;">
+                                       
+                                     {{ trans('label.payment_detail') }} 
+                                    </td>
+                                    <td>
+                                       <table cellspacing="0" cellpadding="0" width="100%">
+                                          <tbody>
+                                            <tr>
+                                                <td width="50%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000;">{{ trans('label.payment_label') }}:</td>
+                                                <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000;">{{ $payment_type }}</td>
+                                             </tr>
+                                             <tr>
+                                                <td width="50%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000;">{{ trans('label.date_label') }} :</td>
+                                                <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000;">{{ $date }}</td>
+                                             </tr>
+                                             <tr>
+                                                <td width="50%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000;">{{ trans('label.status_label') }} :</td>
+                                                <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000;">{{ $status }}</td>
+                                             </tr>
+                                          </tbody>
+                                          <tfoot>
+                                             <tr>
+                                                <td width="50%" style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000; border-top:2px solid #ccc;">{{ trans('label.total_net') }} :</td>
+                                                <td style="font-family:arial; font-size: 12px; font-weight: 600; margin:0; padding: 2px 5px; color: #000; border-top:2px solid #ccc;">{{ $total_price }}</td>
+                                             </tr>
+                                          </tfoot>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                     </table>
+                  </div>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </body>
+</html>
