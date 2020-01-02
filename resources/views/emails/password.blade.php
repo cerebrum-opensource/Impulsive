@@ -1,1 +1,0 @@
-Click here to reset your password: {{ url('wellpop/public/password/reset/'.$token) }}

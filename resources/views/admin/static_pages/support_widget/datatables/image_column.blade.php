@@ -1,1 +1,0 @@
-<img src="{{ asset('/images/admin/widget/').'/'.$id.'/'.$image }}">
